@@ -20,6 +20,17 @@ class LandingController extends Controller
         return view('login');
     }
 
+    public function register()
+    {
+        return view('register');
+    }
+
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
+
+
     /**
      * Show the form for creating a new resource.
      */

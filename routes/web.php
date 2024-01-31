@@ -18,5 +18,8 @@ use App\Http\Controllers\LandingController;
 //     return view('homepage');
 // });
 
-Route::get('login', [LandingController::class, 'login'])->name('login');
 Route::resource('/', LandingController::class);
+Route::get('login', [LandingController::class, 'login'])->name('login');
+Route::get('register', [LandingController::class, 'register'])->name('register');
+Route::get('dashboard', [LandingController::class, 'dashboard'])->name('dashboard');
+

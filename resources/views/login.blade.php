@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/design.css') }}" >
-    {{-- <link rel="stylesheet" href="design.css"> --}}
     <title>Hackathon</title>
     <script defer src="{{ asset('assets/js/script.js') }}"></script>
-    {{-- "{{ asset('assets/css/design.css') }}" --}}
 </head>
 <body>
     <section id="login-page">

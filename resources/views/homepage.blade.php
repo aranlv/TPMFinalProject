@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homepage</title>
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/design.css') }}" >
-  {{-- <link rel="stylesheet" href="../css/design.css"> --}}
 </head>
 <body class="homepage-body">
     <div class="navbar-container">
