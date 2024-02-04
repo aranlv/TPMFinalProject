@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #EEEEEE;
+}
+
+.header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.header h1 {
+    background-color: #242424;
+    padding-left: 25px;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.headerkanan {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    background-color: #242424;
+}
+
+.logout-bg{
+    background-color: #242424;
+}
+
+.logout-btn {
+    cursor: pointer;
+    background-color: #FFD369;
+    border-radius: 12px;
+    padding: 8px 24px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.header span {
+    background-color: #242424;
+    color: #DE9E46;
+}
+
+.headerkanan h1 {
+    font-size: 28px;
+    color: #f0f0f0;
+    font-weight: 700;
+    margin-right: 40px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar {
+    background-color: #EEEEEE;
+    margin-bottom: 15px;
+    margin-left: 140px;
+}
+
+.search-icon {
+    background-color: #D9D9D9;
+    width: 1vw;
+    height: 1.1vh;
+    position: absolute;
+    top: 131px;
+    left: 175px;
+    transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.searchbar input {
+    margin-left: 30px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    border: none;
+    width: 350px;
+    height: 30px;
+    padding-left: 25px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.searchbar:hover input {
+    background-color: #f0f0f0; 
+    width: 380px; 
+}
+
+.search-icon:hover {
+    background-color: #f0f0f0; 
+}
+
+.isi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EEEEEE;
+}
+
+.isititle h1 {
+    font-size: 64px;
+    font-weight: 300;
+}
+
+.thebox {
+    background-color:  #EEEEEE;
+    border: 3px solid #FFD369;
+    padding: 20px;
+    width: 80%;
+    margin: 10px;
+    text-align: center;
+}
+
+.isititle {
+    margin-bottom: 10px;
+}
+
+.isititle hr {
+    width: 75%;
+    margin-left: 120px;
+    height: 3px;
+    background-color: #FFD369;
+    margin-bottom: 20px;
+}
+
+.isibutton {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.nextpage {
+    margin-left: 200px;
+}
+
+.viewdata-btn,
+.editdata-btn {
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 40px;
+    justify-content: space-between;
+    cursor: pointer;
+    text-align: center;
+    width: 50%;
+    margin-left: 0px;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 64px;
+    font-weight: 400;
+    padding: 15px 32px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.viewdata-btn {
+    margin-left: 300px;
+}
+
+.deleteteam-btn {
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 40px;
+    justify-content: space-between;
+    cursor: pointer;
+    text-align: center;
+    width: 50%;
+    margin-left: 0px;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 64px;
+    font-weight: 400;
+    padding: 15px 32px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.viewdata-btn:hover,
+.editdata-btn:hover,
+.deleteteam-btn:hover {
+    background-color: #CCCCCC; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.05);
+}
+
+.logout-btn:hover {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 430px) {
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .headerkanan h1 {
+        font-size: 18px;
+    }
+
+    .searchbar {
+        margin-left: 0px;
+    }
+
+    .search-icon {
+        width: 3.2vw;
+        height: 1.4vh;
+        top: 95px;
+        left: 37px;
+    }
+
+    .isititle h1 {
+        font-size: 20px;
+    }
+
+    .thebox {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .isititle hr {
+        width: 75%;
+        margin-left: 43px;
+        height: 3px;
+        background-color: #FFD369;
+        margin-bottom: 20px;
+        margin-top: 7px;
+    }
+
+    .isibutton {
+        padding-top: 5px;
+    }
+
+    .viewdata-btn,
+    .editdata-btn {
+        border-radius: 20px;
+        width: 50%;
+        margin-left: 0px;
+        font-size: 16px;
+        padding: 9px 16px;
+    }
+
+    .deleteteam-btn {
+        border-radius: 20px;
+        width: 50%;
+        margin-left: 78px;
+        font-size: 16px;
+        padding: 9px 16px;
+    }
+    
+}

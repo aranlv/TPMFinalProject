@@ -27,7 +27,7 @@
     </div>
 
     <div class="isititle">
-        <h1>Team Name</h1>
+        <h1>{{ auth()->user()->{'group-name'} }}</h1>
     </div>
 
     <div class="isi">
@@ -38,28 +38,35 @@
                 </div>
     
                 <div class="thebox">
-                    <p>Leader's Full Name</p>
+                    <p>Full Name: {{ auth()->user()->{'leader-full-name'} }}</p>
                     <hr>
-                    <p>Leader's E-mail</p>
+                    <p>Email: {{ auth()->user()->{'email'} }}</p>
                     <hr>
-                    <p>Leader's Whatsapp Number</p>
+                    <p>Whatsapp Number: {{ auth()->user()->{'whatsapp-number'} }}</p>
                     <hr>
-                    <p>LINE ID</p>
+                    <p>LINE ID: {{ auth()->user()->{'line-id'} }}</p>
                     <hr>
-                    <p>Leader's Github/Gitlab ID</p>
+                    <p>Github/Gitlab ID: {{ auth()->user()->{'github'} }}</p>
                     <hr>
-                    <p>Leader's Birth Place</p>
+                    <p>Birth Place: {{ auth()->user()->{'birth-place'} }}</p>
                     <hr>
-                    <p>Leader's DOB</p>
+                    <p>DOB [YYYY/MM/DD]: {{ auth()->user()->{'dob'} }}</p>
                     <hr>
                 </div>
             </div>
         </div>
 
         <div class="buttonisi">
-            <button class="viewcv">View CV</button>
-            <button class="viewidcard">View ID Card</button>
+            <a href="{{ route('download.file', ['attribute' => 'cv']) }}">
+                <button href="{{ route('download.file', ['attribute' => 'cv']) }}" class="viewcv">View CV</button>
+            </a>
+            <a href="{{ route('download.file', ['attribute' => 'id-card']) }}">
+                <button href="{{ route('download.file', ['attribute' => 'id-card']) }}"class="viewidcard">View ID Card</button>
+            </a>
+
             <button class="contactperson">Contact Person</button>
+
+
         </div>
     </div>
 

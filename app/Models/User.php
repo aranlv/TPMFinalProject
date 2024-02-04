@@ -21,6 +21,17 @@ class User extends Authenticatable
         'group-name',
         'email',
         'password',
+
+        'leader-full-name',
+        'whatsapp-number',
+        'line-id',
+        'github',
+        'birth-place',
+        'dob',
+
+        'cv',
+        'id-card',
+        'flazz'
     ];
 
     // protected $guarded = ['id'];

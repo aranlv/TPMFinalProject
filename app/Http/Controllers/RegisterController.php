@@ -29,13 +29,37 @@ class RegisterController extends Controller
      */
     public function store(Request $request) 
     {
+        $dob = $request->input('yy') . '-' . $request->input('mm') . '-' . $request->input('dd');
+        $request['dob'] = $dob;
 
         $validated = $request->validate([
             'group-name' => 'required',
             'email'=>'required|email',
-            'password'=>'required'
+            'password'=>'required',
+
+            'leader-full-name' => 'required',
+            'whatsapp-number' => 'required',
+            'line-id' => 'required',
+            'github' => 'required',
+            'is_binusian' => 'required',
+            // 'birth-place' => 'required',
+            
+            'cv' => 'required|mimes:pdf,jpg,jpeg,png',
+            'flazz' => $request->input('is_binusian') ? 'required|mimes:pdf,jpg,jpeg,png' : '',
+            'id-card' => $request->input('is_binusian') ? '' : 'required|mimes:pdf,jpg,jpeg,png',
+            'dob' => 'required|date_format:Y-m-d' 
         ]);
-    
+
+        if($request->file('cv')){
+            $validated['cv'] = $request->file('cv')->store('post-cv');
+        }
+        if($request->file('id-card')){
+            $validated['id-card'] = $request->file('id-card')->store('post-id-card');
+        }
+        if($request->file('flazz')){
+            $validated['flazz'] = $request->file('flazz')->store('post-flazz');
+        }
+        
         User::create($validated);
         return redirect('login');
     }

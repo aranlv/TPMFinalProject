@@ -13,11 +13,15 @@
         <div>
             <h1 class="nav-heading"><span class="heading-1">Hack</span><span>athon</span></h1>
         </div>
-        <a href="#landing" class="content-link">Home</a>
+        <a href="#landing">Home</a>
+        <a href="#prize-container">Champion Prizes</a>
+        <a href="#jury-container">Mentor & Jury</a>
+        <a href="#registration-container">About</a>
+        {{-- <a href="#landing" class="content-link">Home</a>
         <a href="#prize-container" class="content-link">Champion Prizes</a>
         <a href="#jury-container" class="content-link">Mentor & Jury</a>
-        <a href="#registration-container" class="content-link"#>About</a>
-        <a href="#"> FAQ</a>
+        <a href="#registration-container" class="content-link"#>About</a> --}}
+        <a href="faq"> FAQ</a>
         <a href="#">Timeline</a>
         
         @auth
@@ -227,7 +231,7 @@
             <div class="left-container">
                 <h2>What is Hackathon?</h2>
                 <p>The goal of a hackathon is to create functioning software or hardware by the end of the event. Hackathons tend to have a specific focus, which can include the programming language used, the operating system, an application, an API, or the subject and the demographic group of the programmers.</p>
-                <a class="download-button" href="https://drive.google.com/file/d/1FQef4_keY9dA3pWDiZAiuICxqEr8-iVJ/view">Download Guidebook</a>
+                <a class="download-button" href="{{ url('/download-guidelines') }}" download="Guidebook.pdf">Download Guidebook</a>
             </div>
             <div class="right-container">
                 <img src="{{ asset('assets/images/homepage/image 42.png') }}" alt="some image">
@@ -252,5 +256,63 @@
           <div class="slide"><img src="{{ asset('assets/images/homepage/slider hp/image 74.png') }}" alt="Slide 5"></div>
         </div>
       </div>
+      
+      <div class="media-partner">
+        <h2 class="title-heading">Media Partner</h2>
+        <div class="medpar-img">
+            <img src="{{ asset('assets/images/homepage/media partner/image 35.png') }}" alt="">
+        </div>
+        </div>
+
+      <div class="other-events-container">
+          <div class="events-wrapper">
+            <div class="virtual-con">
+                <h3 class="title-heading">Virtual Conference</h3>
+                <div class="event-img">
+                    <img src="{{ asset('assets/images/homepage/other events/image 28.png') }}" alt="">
+                </div>
+                <a href="#" class="register-button register-other-1">Register</a>
+            </div>
+
+            <h2 class="title-heading other-events">Other Events</h2>
+
+            <div class="developer-workshop">
+                <h3 class="title-heading">Developer Workshop</h3>
+                <div class="event-img">
+                    <img src="{{ asset('assets/images/homepage/other events/Rectangle 4196.png') }}" alt="">
+                </div>
+                <a href="#" class="register-button register-other-2">Register</a>
+                
+            </div>
+        </div>
+        <div class="any-questions">
+            <div class="question-container">
+                <h2>Any Questions?</h2>
+                <a href="mailto:technoscape@bncc.net" class="contact-us-button">Contact Us</a>
+            </div>
+        </div>
+
+        <div class="black-hr"></div>
+        <div class="socials">
+            <a href="https://twitter.com/BNCC_Binus"><img src="{{ asset('assets/images/homepage/sosmed/image 18.png') }}" alt=""></a>
+            <a href="https://www.facebook.com/bina.nusantara.computer.club/?locale=id_ID"><img src="{{ asset('assets/images/homepage/sosmed/image 19.png') }}" alt=""></a>
+            <a href="https://www.linkedin.com/company/bina-nusantara-computer-club/?originalSubdomain=id"><img src="{{ asset('assets/images/homepage/sosmed/image 20.png') }}" alt=""></a>
+            <a href="https://www.instagram.com/technoscapebncc/"><img src="{{ asset('assets/images/homepage/sosmed/image 21.png') }}" alt=""></a>
+            <a href="mailto:technoscape@bncc.net"><img src="{{ asset('assets/images/homepage/sosmed/image 22.png') }}" alt=""></a>
+        </div>
+    </div>
+
+      <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+             anchor.addEventListener('click', function (e) {
+                 e.preventDefault();
+
+                  document.querySelector(this.getAttribute('href')).scrollIntoView({
+                     behavior: 'smooth'
+                  });
+              });
+         });
+      </script>
+
 </body>
 </html>
