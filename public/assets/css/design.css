@@ -95,6 +95,7 @@ input, button{
 .icon{
     position: absolute;
     transform: translate(0px,-6px);
+    width: 1.5rem;
 }
 .input-box a{
     margin-top: 10px;
@@ -194,7 +195,16 @@ input, button{
     padding: 2rem;
 }
 
-.input-box-2 input[type=text], input[type=email], input[type=password]{
+.input-box-1 input[type=text], input[type=integer], input[type=email]{
+  display: block;
+  width: 95%;
+  padding: 0.75rem;
+  border: none;
+  margin: 0.5rem 0 0.5rem 0;
+  background-color: #dcdcdc;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.input-box-2 input[type=password]{
     display: block;
     width: 95%;
     padding: 0.75rem;
@@ -244,14 +254,14 @@ input[type=file]{
     display: block;
 }
 
-.input-box-2 input[type=file]{
+.input-box-1 input[type=file]{
     background-color: #D9D9D9;
     padding: 0.75rem;
     width: 95%;
     margin: 0.5rem 0 0.5rem 0;
 }
 
-.input-box-2 p{
+.input-box-1 p{
     margin: 0 0 1rem 0;
     font-size: 75%;
 }
@@ -387,6 +397,7 @@ label{
     position: absolute;
     z-index: 1;
     transform: translateY(-310px);
+    width: 100%;
   }
   
   /*navbar*/
@@ -453,7 +464,7 @@ label{
   .juries{
     display: flex;
     justify-content: space-between;
-    margin-left: 1rem;
+    align-items: center;
   }
 
   .jury-container{
@@ -474,8 +485,11 @@ label{
     color: white;
   }
 
-  .juries img{
+  .jury img{
+    width: 20rem;
     padding: 2rem 0 2rem 0;
+    display: block;
+    margin:  0 auto 1rem;
   }
 
   /*mentor*/
@@ -638,7 +652,7 @@ label{
   margin-top: 2rem;
   position: absolute;
   left: 50rem;
-  border: 1px solid #222831;
+  border: 2px solid #222831;
   color: #222831;
 }
 .footer{
@@ -676,4 +690,120 @@ img {
   100% {
     transform: translateX(-100%);
   }
+}
+
+
+.title-heading{
+  margin: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.medpar-img{
+  max-width: 30rem;
+  display: flex;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.other-events-container{
+  margin-top: 3rem;
+}
+
+.virtual-con, .developer-workshop{
+  width: 50%;
+  height: 50rem;
+  padding-top: 5rem;
+}
+
+.virtual-con{
+  background-color: #FFD369;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.developer-workshop{
+  background-color: #fff;
+  position: relative;
+}
+.event-img{
+  width: 30rem;
+  height: 30rem;
+  margin-left: 10rem;
+}
+
+
+.events-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.title-heading.other-events {
+  position: absolute;
+  top: 1rem;
+  left: 35rem;
+  z-index:1;
+}
+
+.register-other-1{
+  left: 12.5rem;
+  top: 44rem;
+  position: absolute;
+}
+
+.register-other-2{
+  left: 12.5rem;
+  top: 44rem;
+  position: absolute;
+}
+
+.any-questions{
+  background-color: #FFD369;
+  padding: 5rem;
+}
+
+.question-container{
+  background-color: #222831;
+  padding: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  border-radius: 100px;
+  color: #fff;
+  position: relative;
+}
+
+.question-container h2{
+  margin-left: 10rem;
+  font-size: 2rem;
+}
+
+.contact-us-button{
+  background-color: #FFD369;
+  position: absolute;
+  display: block;
+  text-decoration: none;
+  padding: 1.5rem 5rem 1.5rem 5rem;
+  border-radius: 50px;
+  border: 2px solid #222831;
+  left: 38rem;
+  bottom: 4rem;
+  color: #222831;
+}
+
+.socials{
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFD369;
+  padding: 2rem;
+}
+.socials img{
+  width: 8rem;
+}
+
+.black-hr{
+  height: 2px;
+  background-color: #222831;
 }

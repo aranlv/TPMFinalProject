@@ -78,4 +78,12 @@ class LandingController extends Controller
     {
         //
     }
+
+    public function download()
+    {
+        $filePath = public_path('Hackathon Guidelines.pdf');
+        $fileName = 'Guidebook.pdf';
+
+        return response()->download($filePath, $fileName);
+    }
 }

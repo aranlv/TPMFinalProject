@@ -47,17 +47,31 @@ function updateProgressBar(){
 }
 
 
+// function changeColor(e){
+//     const btn = document.getElementById(e);
+//     document.getElementById(e).style.backgroundColor = "#8591FF";
+//     const btn2 = document.getElementsByName('btn');
+//     for (let idx = 0; idx < btn2.length; idx++) {
+//         var id = btn2[idx].getAttribute( 'id' );
+//         if(id !=e){
+//             document.getElementById(id).style.backgroundColor = "#dcdcdc";
+//             break;
+//         }
+//     }
+// }
 function changeColor(e){
     const btn = document.getElementById(e);
     document.getElementById(e).style.backgroundColor = "#8591FF";
     const btn2 = document.getElementsByName('btn');
     for (let idx = 0; idx < btn2.length; idx++) {
         var id = btn2[idx].getAttribute( 'id' );
-        if(id !=e){
+        if(id != e){
             document.getElementById(id).style.backgroundColor = "#dcdcdc";
-            break;
-        }
-    }
+        }
+    }
+
+    // Update the hidden input value based on the button clicked
+    document.getElementById('isBinusianInput').value = (e === 'btnBinusian') ? '1' : '0';
 }
 let slideIndex = 0;
 showSlides();
@@ -100,3 +114,5 @@ function validatePassword() {
 
     return errors;
 }
+
+
