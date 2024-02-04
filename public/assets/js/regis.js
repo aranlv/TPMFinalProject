@@ -47,18 +47,6 @@ function updateProgressBar(){
 }
 
 
-// function changeColor(e){
-//     const btn = document.getElementById(e);
-//     document.getElementById(e).style.backgroundColor = "#8591FF";
-//     const btn2 = document.getElementsByName('btn');
-//     for (let idx = 0; idx < btn2.length; idx++) {
-//         var id = btn2[idx].getAttribute( 'id' );
-//         if(id !=e){
-//             document.getElementById(id).style.backgroundColor = "#dcdcdc";
-//             break;
-//         }
-//     }
-// }
 function changeColor(e){
     const btn = document.getElementById(e);
     document.getElementById(e).style.backgroundColor = "#8591FF";
@@ -115,4 +103,17 @@ function validatePassword() {
     return errors;
 }
 
+function validateConfirmPassword() {
+    const errors = [];
+    const passwordValue = regisPassword.value.trim();
+    const confirmPasswordValue = regisConfirmPassword.value.trim();
+
+    if (confirmPasswordValue === "") {
+        errors.push("Confirm Password tidak boleh kosong.");
+    } else if (confirmPasswordValue !== passwordValue) {
+        errors.push("Confirm Password harus sama dengan Password.");
+    }
+
+    return errors;
+}
 

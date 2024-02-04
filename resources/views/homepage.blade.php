@@ -17,10 +17,6 @@
         <a href="#prize-container">Champion Prizes</a>
         <a href="#jury-container">Mentor & Jury</a>
         <a href="#registration-container">About</a>
-        {{-- <a href="#landing" class="content-link">Home</a>
-        <a href="#prize-container" class="content-link">Champion Prizes</a>
-        <a href="#jury-container" class="content-link">Mentor & Jury</a>
-        <a href="#registration-container" class="content-link"#>About</a> --}}
         <a href="faq"> FAQ</a>
         <a href="#">Timeline</a>
         

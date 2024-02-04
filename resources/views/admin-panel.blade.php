@@ -11,9 +11,7 @@
 </head>
 <body>
     <div class="header">
-
         <h1>Hack<span>athon</span></h1>
-
         <div class="headerkanan">
             <h1>Admin Panel</h1>
             <form class="logout-bg" action="logout" method="post">
@@ -24,14 +22,14 @@
     </div>
 
     <div class="searchbar">
-        <img class = "search-icon" src="{{ asset('assets/images/search.png') }}" alt="">
-        <input type="text" class="icon" value placeholder="Search...">
+        <img class="search-icon" src="{{ asset('assets/images/search.png') }}" alt="">
+        <input type="text" class="icon" id="searchInput" placeholder="Search...">
     </div>
 
     <div class="isi">
-      @foreach($users as $index => $u)
+        @foreach($users as $index => $u)
             @if(!$u->is_admin)
-                <div class="thebox">
+                <div class="thebox" id="user{{ $index }}">
                     <div class="isititle">
                         <h1>{{ $u->{'group-name'} }}</h1>
                         <hr>
@@ -49,11 +47,10 @@
                                 <p>{{ $u->{'dob'} }}</p>
                             </div>
                         </div>
-                        <a href="{{route('edit', $u->id)}}">
+                        <a href="{{ route('edit', $u->id) }}">
                             <button class="editdata-btn">Edit Data</button>
                         </a>
-
-                        <form class="formdelete" action="{{route('delete', $u->id)}}" method="POST">
+                        <form class="formdelete" action="{{ route('delete', $u->id) }}" method="POST">
                           @csrf
                           @method('delete')
                           <button class="deleteteam-btn">Delete Team</button>
@@ -63,21 +60,27 @@
             @endif
         @endforeach
     </div>
+
     <script>
-      @foreach($users as $index => $u)
-            @if(!$u->is_admin)
-                document.getElementById('toggleButton{{ $index }}').addEventListener('click', function() {
-                    var div = document.getElementById('hiddenDiv{{ $index }}');
-                    if (div.style.display === 'none') {
-                        div.style.display = 'block';
+        document.getElementById('searchInput').addEventListener('input', function() {
+            var input, filter, container, userBoxes, i, userBox, userTitle;
+            input = this.value.toUpperCase();
+            container = document.querySelector('.isi');
+            userBoxes = container.getElementsByClassName('thebox');
+
+            for (i = 0; i < userBoxes.length; i++) {
+                userBox = userBoxes[i];
+                userTitle = userBox.getElementsByClassName('isititle')[0];
+                if (userTitle) {
+                    filter = userTitle.getElementsByTagName('h1')[0];
+                    if (filter.innerHTML.toUpperCase().indexOf(input) > -1) {
+                        userBox.style.display = '';
                     } else {
-                        div.style.display = 'none';
+                        userBox.style.display = 'none';
                     }
-                });
-            @endif
-        @endforeach
+                }
+            }
+        });
     </script>
 </body>
 </html>
-
-

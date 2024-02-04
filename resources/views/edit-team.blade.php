@@ -35,8 +35,6 @@
                         <hr>
                     </div>
                     <div class="isibutton">
-                        {{-- <div class="boxleader" id="boxleader">
-                            <div class="thebox"> --}}
                               <form action="{{route('update', $team->id)}}" method="POST">
                                 @csrf
                                 @method('PATCH')
@@ -70,11 +68,6 @@
                                   <button class="editdata-btn">Submit Changes</button>
       
                               </form>
-
-                                
-                            {{-- </div>
-                        </div> --}}
-                        
                         
                     </div>
                 </div>

@@ -74,11 +74,8 @@
                     <div class="input-box-2">
                         <label for="confirm-register-password">Confirm password</label>
                         <input type="password" id="confirm-register-password">
+                        <p class="password-error-message" id="confirm-password-error" hidden>Invalid Confirm Password</p>
                     </div>
-                    {{-- <div class="binus-button">
-                        <input type="button" name="btn" value="Binusian" id="btnBinusian" onclick="changeColor(this.id)">
-                        <input type="button" name="btn" value="Non-Binusian"  id="btnNonBinusian" onclick="changeColor(this.id)"> 
-                    </div> --}}
                     <input type="hidden" id="isBinusianInput" name="is_binusian" value="">
     
                     <div class="binus-button">

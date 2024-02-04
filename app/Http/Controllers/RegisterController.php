@@ -42,8 +42,7 @@ class RegisterController extends Controller
             'line-id' => 'required',
             'github' => 'required',
             'is_binusian' => 'required',
-            // 'birth-place' => 'required',
-            
+
             'cv' => 'required|mimes:pdf,jpg,jpeg,png',
             'flazz' => $request->input('is_binusian') ? 'required|mimes:pdf,jpg,jpeg,png' : '',
             'id-card' => $request->input('is_binusian') ? '' : 'required|mimes:pdf,jpg,jpeg,png',
@@ -64,35 +63,4 @@ class RegisterController extends Controller
         return redirect('login');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
 }

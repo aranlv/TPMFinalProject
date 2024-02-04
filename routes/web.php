@@ -44,3 +44,6 @@ Route::get('/download-file/{attribute}', [DashboardController::class, 'download'
 
 Route::get('/download-guidelines', [LandingController::class, 'download']);
 
+Route::get('faq', [LandingController::class, 'faq'])->name('faq');
+
+

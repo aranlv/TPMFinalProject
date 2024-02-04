@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Mono', monospace;
+}
+
+.navbar {
+    background-color: #393E46;
+    padding-bottom: 30px;
+}
+
+.navbar h1 {
+    font-size: 60px;
+    color: #FFD369;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+
+.isi {
+    /* background: url({{ asset('images/Background.png') }}); */
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+}
+
+.background {
+    top: 117px;
+    right: 0px;
+    height: 3000px;
+    width: 1700px;
+    position: absolute;
+}
+
+.isi p {
+    
+	position: relative;
+	max-width: 30em;
+	background-color: #FFD369;
+	padding: 1.125em 1.5em;
+	font-size: 1.25em;
+	border-radius: 1rem;
+    box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+    padding: 20px;
+    color: #000000;
+    word-spacing: 2px;
+    font-size: 16px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+
+.isi p::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 100%;
+	right: 1.5em; 
+	border: .75rem solid transparent;
+	border-top: none;
+
+	border-bottom-color: #FFD369;
+	filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+}
+
+.bubble2 p {
+    position: relative;
+	max-width: 30em;
+	background-color: #FFFFFF;
+	padding: 1.125em 1.5em;
+	font-size: 1.25em;
+	border-radius: 1rem;
+    box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+    padding: 20px;
+    color: #000000;
+    word-spacing: 2px;
+    font-size: 16px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+
+.bubble2 p::before {
+    content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 100%;
+	left: 1.5em; 
+	border: .75rem solid transparent;
+	border-top: none;
+
+	border-bottom-color: #FFFFFF;
+	filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+}
+
+.bubble1, .bubble3, .bubble4, .bubble5, .bubble6, .bubble7, .bubble8, .bubble9 {
+    display: inline-block;
+    border-radius: 12px;
+    margin-left: 1130px;
+    margin-top: 50px;
+    position: relative;
+    width: 400px;
+    background-color: #FFD369;
+}
+
+.bubble2 {
+    border-radius: 12px;
+    margin-top: 50px;
+    margin-left: 150px;
+    display: inline-block;
+    position: relative;
+    width: 350px;
+    height: auto;
+    background-color: #EEEEEE;
+}
+
+.bubble9 {
+    margin-bottom: 100px;
+}
