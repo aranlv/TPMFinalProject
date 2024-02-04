@@ -18,7 +18,10 @@
             <ul class="navbar">
                 <button class="dashboard-btn">Dashboard</button>
                 <button class="timeline-btn">Timeline</button>
-                <button class="logout-btn">Logout</button>
+                <form action="logout" method="post">
+                    @csrf
+                    <button class="logout-btn">Logout</button>
+                </form>
             </ul>
         </div>
     </div>

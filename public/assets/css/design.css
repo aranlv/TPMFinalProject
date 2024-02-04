@@ -194,7 +194,7 @@ input, button{
     padding: 2rem;
 }
 
-.input-box-2 input[type=text]{
+.input-box-2 input[type=text], input[type=email], input[type=password]{
     display: block;
     width: 95%;
     padding: 0.75rem;
@@ -342,6 +342,8 @@ label{
 
 .homepage-body{
     background-color: #fff;
+    overflow: visible;
+    overflow-x: hidden;
   }
   
   .hp-content{
@@ -413,3 +415,265 @@ label{
     border-radius: 50px;
     
   }
+
+  /*champion section*/
+  .prize-container{
+    margin-top: 30rem;
+  }
+    .prize-container h1{
+        text-align: center;
+        margin: 3rem;
+        font-size: 4rem;
+    }
+  .winners{
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .placement{
+   margin: 10rem 5rem 5rem 5rem;
+  }
+
+  .placement h3{
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  .placement p{
+    font-size: 1.5rem;
+    color: #717171;
+  }
+
+  .vertical-line{
+    border: 1px solid;
+    height: 30rem;
+  }
+
+  .juries{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1rem;
+  }
+
+  .jury-container{
+    background-color: #393e46;
+    margin-top: 3rem;
+    padding: 3rem;
+  }
+  .jury-container h1{
+    text-align: center;
+  }
+
+  .jury{
+    color: #fff;
+    text-align: center;
+    margin: 1.25rem;
+  }
+  .vl-white{
+    color: white;
+  }
+
+  .juries img{
+    padding: 2rem 0 2rem 0;
+  }
+
+  /*mentor*/
+  .mentors-container{
+    background-color: #222831;
+    padding: 2rem;
+  }
+
+  .mentors-container h1, .jury-container h1{
+    text-align: center;
+    color: #fff;
+    font-size: 5rem;
+    padding: 2rem;
+  }
+
+  /*business slider*/
+  .slideshow-container {
+    width: 30rem;
+    position: relative;
+    margin: auto;
+  }
+  .slides{
+    display: none;
+    color: #fff;
+    text-align: center;
+  }
+
+  .slides h2,p{
+    margin: 1rem;
+  }
+  .slide-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .active, .dot:hover {
+    background-color: #FFD369;
+  }
+
+  .is-hidden {
+    display: none;
+}
+
+.slideshow:not(.is-hidden) {
+    display: block;
+}
+
+.menu{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin: 2rem 20rem 5rem 20rem;
+ 
+}
+
+.menu:hover{
+  cursor: pointer;
+}
+.menu li{
+  color: #fff;
+  font-size: 2rem;
+  position: relative;
+}
+
+.menu li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 5px; 
+  background-color: #fff; 
+  border-radius: 3px;
+}
+
+.menu li.actives::after {
+  background-color: #FFD369;
+}
+
+.menu li.actives {
+  font-weight: bold;
+}
+
+/*register container bottom*/
+.registration-container{
+  position: relative;
+}
+.general-info{
+  display: flex;
+  justify-content: center;
+}
+
+.left-container{
+  width: 50%;
+  margin: 5rem 0 5rem 5rem;
+
+}
+
+.left-container h2{
+  text-align: center;
+}
+
+.right-container img{
+  width: 40rem;
+  margin-top: 5rem;
+  margin-left: 3rem;
+  margin-right: 5rem;
+}
+
+.download-button{
+  text-decoration: none;
+  padding: 1rem;
+  background-color: #53D6FF;
+  border: 1px solid #222831;
+  display: block;
+  width: 35%;
+  border-radius: 50px;
+  text-align: center;
+  color: #222831;
+  margin-top: 2rem;
+}
+
+.register-button{
+  text-decoration: none;
+  background-color: #FFD369;
+  display: block;
+  padding: 2rem;
+  border-radius: 50px;
+  width: 35%;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  position: absolute;
+  left: 50rem;
+  border: 1px solid #222831;
+  color: #222831;
+}
+.footer{
+  margin-top: 12rem;
+
+}
+/*slider bottom*/
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.slider {
+  white-space: nowrap;
+  animation: scrollAnimation 15s linear infinite;
+}
+
+.slide {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: -4px;
+}
+
+img {
+  width: 80%;
+  height: auto;
+  display: block;
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

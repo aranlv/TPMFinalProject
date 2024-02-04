@@ -47,8 +47,9 @@
             </div>
 
         
-            <form class="register-form" action="">
-                <h2 class="text-center">Register</h2>
+            <form class="register-form" action="register" method="post">
+              @csrf
+              <h2 class="text-center">Register</h2>
 
                 <!--progress bar-->
                 <div class="progressbar">
@@ -63,16 +64,16 @@
                 <div class="form-step active">
                     <div class="input-box-2">
                         <label for="group-name">Nama Group</label>
-                        <input type="text" id="group-name">
+                        <input type="text" id="group-name" name="group-name">
                     </div>
                     <div class="input-box-2">
                         <label for="register-password">Password</label>
-                        <input type="text" id="register-password">
+                        <input type="password" id="register-password" name="password">
                         <p class="password-error-message" id="password-error" hidden>Invalid Password</p>
                     </div>
                     <div class="input-box-2">
                         <label for="confirm-register-password">Confirm password</label>
-                        <input type="text" id="confirm-register-password">
+                        <input type="password" id="confirm-register-password">
                     </div>
                     <div class="binus-button">
                         <input type="button" name="btn" value="Binusian" id="btnBinusian" onclick="changeColor(this.id)">
@@ -88,23 +89,23 @@
                 <div class="form-step">
                     <div class="input-box-2">
                         <label for="full-name">Full Name</label>
-                        <input type="text" id="full-name">
+                        <input type="text" id="full-name" name="leader-full-name">
                     </div>
                     <div class="input-box-2">
                         <label for="email">Email</label>
-                        <input type="text" id="email">
+                        <input type="email" id="email" name="email">
                     </div>
                     <div class="input-box-2">
                         <label for="github">Github/Gitlab</label>
-                        <input type="text" id="github">
+                        <input type="text" id="github" name="github">
                     </div>
                     <div class="input-box-2">
                         <label for="whatsapp">Whatsapp Number</label>
-                        <input type="text" id="whatsapp">
+                        <input type="text" id="whatsapp" name="whatsapp-number">
                     </div>
                     <div class="input-box-2">
                         <label for="lineid">Line ID</label>
-                        <input type="text" id="lineid">
+                        <input type="text" id="line-id" name="line-id">
                     </div>
                     <div>
                         <a href="#" class="button button-next">Next</a>
@@ -119,29 +120,29 @@
                     </div>
                     <div class="birthdate-wrapper">
                         <div class="input-box-2 width-30">
-                            <input type="text" id="birth-date">
+                            <input type="integer" id="dd" name="dd">
                         </div>
                         <div class="input-box-2 width-30">
-                            <input type="text" id="birth-date">
+                            <input type="integer" id="mm" name="mm">
                         </div>
                         <div class="input-box-2 width-30">
-                            <input type="text" id="birth-date">
+                            <input type="integer" id="yy" name="yy">
                         </div>
                     </div>
 
                     <div class="input-box-2">
                         <label for="cv">Upload CV</label>
-                        <input type="file" id="cv">
+                        <input type="file" id="cv" name="cv">
                         <p>Format file pdf, jpg, jpeg, dan png.</p>
                     </div>
                     <div class="input-box-2">
                         <label for="flazz">Upload Flazz Card (Binusian)</label>
-                        <input type="file" id="flazz">
+                        <input type="file" id="flazz" name="flazz">
                         <p>Format file pdf, jpg, jpeg, dan png.</p>
                     </div>
                     <div class="input-box-2">
                         <label for="id-card">Upload ID Card (Non-Binusian)</label>
-                        <input type="file" id="id-card">
+                        <input type="file" id="id-card" name="id-card">
                         <p>Format file pdf, jpg, jpeg, dan png.</p>
                     </div>
                    
